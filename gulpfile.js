@@ -10,7 +10,7 @@ gulp.task('styles', function() {
                 outputStyle: 'compressed'
               }).on('error', $.sass.logError))
              .pipe($.sourcemaps.init())
-             .pipe($.concat('miradademujer.css'))
+             .pipe($.concat('main.css'))
              .pipe($.postcss([ autoprefix({ browsers: 'last 2 versions'} )]))
              .pipe($.sourcemaps.write())
              .pipe(gulp.dest('dist/css'));
